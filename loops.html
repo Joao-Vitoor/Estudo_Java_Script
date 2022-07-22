@@ -9,19 +9,35 @@
 <body>
     
     <script>
-        let numero = prompt("Digite um número")
+        let numero = prompt("Digite um número")// UM ALERTA  
 
             let  indice = 0 // DECLANDO O INDICE QUE É 0
                 while(indice < 10) { // ONDE IRA FAZER O LOOP PARAR! ASSIM QUE CHEGAR NO NÚMERO 10 O INCIDE PARA !!!!
+                document.write(`${numero} * ${indice} =  ${(numero * indice)} <br>`) //  SAIDA E ONDE SERA FEITA A CONTA DA TABUADA !!!
                 indice ++ // INCREMENTO! ELE QUE IRA FAZER A CONTAGEM ATÉ CHEGAR NO NÚMERO 10 E PARA O LOOP
-                document.write(`${indice} * ${numero} =  ${(indice * numero)} <br>`) //  SAIDA E ONDE SERA FEITA A CONTA DA TABUADA !!!
-              
             }
+            //document.write("saiu do loop while<BR>") 
 
-            document.write("saiu do loop while")
+                do{ //FUNÇÃO DO WHILE MOSTRA  QUE DETERMINADO ITEM É FALSO E DEPOIS A FUNÇÃO É EXECULTADA!
+                    if(indice >= 10){
+                        alert("Indice maior que 10")
+                        break;
+
+                    }
+                    document.write(`${numero} * ${indice} =  ${(numero * incide)} <br>`) //  SAIDA E ONDE SERA FEITA A CONTA DA TABUADA !!!
+                indice ++ // INCREMENTO! ELE QUE IRA FAZER A CONTAGEM ATÉ CHEGAR NO NÚMERO 10 E PARA O LOOP
+
+                }while(indice <=10)
+                document.write("saiu do--loop while<BR>") 
+
+            
 
                 for( let numero1 = 0; numero1 <= 10; numero1++){
-                document.write(`${numero1} * ${numero} =  ${(numero1 *numero)} <br>`)
+                   if(numero1 ===5){
+                    continue
+
+                   }
+                document.write(`${numero} * ${numero1} =  ${(numero *numero1)} <br>`)
 
             }
             document.write("saiu do loop for")

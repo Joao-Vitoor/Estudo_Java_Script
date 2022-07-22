@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>FUNÇÕES TABUADA!</h1>
+   
+    <button onclick="tabuada() <BR>">MOSTRAR</button>
+    <button onclick="apagar()" >APAGAR</button>
+    <div id="output"></div>
+    <h1>FUNÇÕES MÉDIA</h1>
+    <button onclick="Media()">CALCULAR MÉDIA</button>
+
+        
+
+    <script>
+        //DECLARAÇÃO DE FUNÇÕES 
+     
+////////////////////////////////////////////////////////////////////////////////////////
+
+        const output = document.getElementById("output")
+        
+        function tabuada() {
+
+            let  numero = parseFloat(prompt("numero")) ///  PARSE TROCA OS DADOS DE STRNGS POR NUMERO
+
+            let msg = "" /// MSG PARA EFETUAR A SAIDA DO CALCULO 
+            for(let i = 0; i <= 10; i++) { // IRÁ FAZER A CONTA DA TABUADA!
+            msg += `${numero} x ${i} = ${(numero * i)} <br>` //  SAIDA !
+            }
+            output.innerHTML = msg   // APARECER MENSAGEM!!!
+        }
+
+        function apagar (){
+            output.innerHTML 
+          
+        }
+
+       
+ 
+        function Media() {
+            let nota1 = parseFloat(prompt("Digite a primeira nota "))
+            let nota2 = parseFloat(prompt("Digita a segunda nota"))
+            let calculo = ""
+
+            let media = (nota1 + nota2 ) / 2
+            calculo += (nota1 + nota2) / 2
+            output.innerHTML = calculo
+        }
+
+       
+       
+      
+    </script>
+</body>
+</html>

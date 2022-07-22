@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>FUNÇÕES</h1>
+    <button onclick="tabuada()">MOSTRAR TABUADA</button>
+    <button onclick="tabuada()">APAGAR TABUADA</button>
+        <div id="output"></div>
+
+    <script>
+        //DECLARAÇÃO DE FUNÇÕES 
+        function ola()  {
+            document.write("Bom dia!<br>");
+        }
+
+        ola()
+
+        //EXPRESSÕES DE FUNÇÕES 
+        const ola2 = function() {
+            console.log("Bom dia funtion expression <br>" );
+            document.write("Bom dia funtion expression<br> ");
+        }
+
+        ola2()
+
+        // ARROW FUNCTIONS 
+        const  ola3 = () =>{
+            document.write("ARROW FUNCTION");
+            console.log("ARROW FUNCTION");
+        }
+
+        ola3()
+
+        ///////////////////////////////////////////////////////////////////////// RETORNANDO VALORES NAS FUNÇÕES 
+       function obtemDiaSemana(){
+            return new Date().getDay() // ESSE CODIGO IRÁ RETORNAR O DIA DA SEMANA.
+       }
+        let dia = obtemDiaSemana();
+        console.log(dia);
+
+        function somar(n1,n2){
+            return n1 + n2;
+        }
+        let  soma = somar (3,5);
+        console.log(soma)
+////////////////////////////////////////////////////////////////////////////////////////
+
+        const output = document.getElementById("output")
+        
+        function tabuada(){
+            let  numero = parseFloat(prompt("numero"))
+            let msg = ""
+            for(let i = 0; i <= 1000; i++)
+            msg += `${numero} x ${i} =${numero * i} <br>`
+            
+        }
+
+       output.innerHTML =msg
+    </script>
+</body>
+</html>
