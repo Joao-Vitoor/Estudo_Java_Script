@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    
+</head>
+<body>
+
+    <h1>Calculando Média e dando os Parabéns</h1>
+
+    <button onclick="Media()">BOA SORTE !</button>
+    <div id="output"></div>
+    <div id="situacao"> </div>
+    
+   
+    <script>
+        const  output  = document.getElementById("output")
+
+            function Media(){
+                let nome = window.prompt('Qual é o nome do aluno?') 
+                let nota1 = Number(prompt("Digite sua primeira nota"))
+                let nota2 = Number(prompt("Digite sua segunda nota"))
+                let calculo = ""
+                let Ruim =""
+                //let Mediano =""
+                //let Bom = ""
+
+                let = calculo = (nota1 + nota2) / 2
+
+                if(calculo <= 5 ){
+                    Ruim = `<br> Sua nota é ${calculo} tem que melhorar!!`
+                }if(calculo == 6){
+                    Ruim = `<br> Sua nota é <br> ${calculo} Está no caminho certo! <br>`
+                
+                }if(calculo > 7 ){
+                    Ruim = `<br> Sua nota é ${calculo} Parabéns! continue assim, vc terá um futuro brilhante! <br>`
+                   // output.innerHTML= nome
+                }
+
+               let res = document.getElementById('situacao')
+                res.innerHTML = `${nome}`
+                calculo += Ruim || Mediano || Bom
+                output.innerHTML = calculo
+
+            } 
+            
+
+    </script>
+    
+</body>
+</html>

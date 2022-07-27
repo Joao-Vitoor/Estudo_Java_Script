@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <body>
+
+    <h1>TESTE PARA HABILITAÇÃO!</h1>
+    
+
+    <button onclick="Mostrar()">Enviar</button>
+    <button onclick="Apagar()">Apagar</button>
+
+    <div id="output"></div>     
+
+        <script>
+
+            const  output = document.getElementById("output") //ITEM PARA PEGAR DADOS DO HTML
+
+            function Mostrar(){ // FUNÇÃO ONDE SERÁ FEITO OS TESTES
+                let idade = parseFloat(prompt("DIGITE SUA IDADE ")) // CONVERTE NUMERO PARA STRING
+                 let nao = ""// VARIAVEL ONDE SERÁ GUARDADO CASO A IDADE NÃO SEJA SUPERIOR OU IGUAL A 18
+                 let sim = ""// VARIAVEL QUE ONDE SERA GUARADADO CASO SEJA VERDADEIRO
+                 let teste =""// VARIAVEL ONDE SERA AMARZENADO A SAIDA DOS DADOS 
+
+                if(idade < 18){
+                console.log (sim = "vc não pode dirigir")
+                }else{ 
+                console.log (nao = "Sim vc  pode dirigir")}
+
+                teste += sim || nao // CONCATENIZAÇÃO USAMOS O METÉDO OR || porque uma das opções terão que ser verdadeiras
+                output.innerHTML = teste //  SAIDA DOS DADOS 
+           }
+
+           function Apagar(){
+            output.innerHTML ="" // FUNÇÃO APAGAR CONTEUDO
+           }
+      
+           
+        </script>
+</body>
+</html>

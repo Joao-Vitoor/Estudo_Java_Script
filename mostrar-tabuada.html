@@ -9,13 +9,14 @@
 <body>
     <h1>FUNÇÕES TABUADA!</h1>
    
-    <button onclick="tabuada() <BR>">MOSTRAR</button>
+    <button onclick="tabuada()">MOSTRAR</button>
     <button onclick="apagar()" >APAGAR</button>
-    <div id="output"></div>
+    
     <h1>FUNÇÕES MÉDIA</h1>
     <button onclick="Media()">CALCULAR MÉDIA</button>
+    <button onclick="ApagarMedia()">APAGAR MÉDIA</button>
 
-        
+    <div id="output"></div>  
 
     <script>
         //DECLARAÇÃO DE FUNÇÕES 
@@ -36,22 +37,29 @@
         }
 
         function apagar (){
-            output.innerHTML 
+            output.innerHTML= "<br>"
           
         }
 
        
  
         function Media() {
-            let nota1 = parseFloat(prompt("Digite a primeira nota "))
-            let nota2 = parseFloat(prompt("Digita a segunda nota"))
+            
+            let nota1 = parseFloat(prompt("Digite a primeira nota <br>"))
+            let nota2 = parseFloat(prompt("Digita a segunda nota<br>"))
             let calculo = ""
 
             let media = (nota1 + nota2 ) / 2
             calculo += (nota1 + nota2) / 2
+            
             output.innerHTML = calculo
         }
 
+        function ApagarMedia(){
+            output.innerHTML =""
+        }
+
+        
        
        
       
